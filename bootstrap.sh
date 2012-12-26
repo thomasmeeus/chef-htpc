@@ -20,3 +20,9 @@ if [[ -d libcec ]]; then
 else
   git clone git://github.com/thomasmeeus/libcec.git
 fi
+
+if [[ -d xbmc ]]; then
+  cd xbmc && git pull && cd ..
+else
+  git clone git://github.com/thomasmeeus/xbmc.git
+fi
