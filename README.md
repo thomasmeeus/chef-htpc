@@ -34,7 +34,8 @@ Edit /etc/chef/solo.rb like this:
     role_path nil
     log_level :info
     
-Edit /root/chef/node.json like this:
+Edit ```/root/chef/node.json``` like this:
+
     {
         "run_list": [ "recipe[htpc::default]" ]
     }
