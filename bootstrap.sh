@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir -p ~/chef/cookbooks
-cd ~/chef/cookbooks
+mkdir -p /root/chef/cookbooks
+cd /root/chef/cookbooks
 
 if [[ -d apt ]]; then
   cd apt && git pull && cd ..
