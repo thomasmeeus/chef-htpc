@@ -7,6 +7,9 @@ What does it do?
 ================
 
 * Install LibCEC
+* Install XBMC
+* Install  and configure Sabnzbd
+* Install and configure Nginx to reverse proxy
 
 How To
 ======
@@ -33,7 +36,7 @@ Edit /etc/chef/solo.rb like this:
     data_bag_path "/root/chef/data_bags"
     role_path nil
     log_level :info
-    
+
 Edit ```/root/chef/node.json``` like this:
 
     {
@@ -43,7 +46,7 @@ Edit ```/root/chef/node.json``` like this:
 Bootstrap
 ---------
 
-Clone this repo in ```/root/chef/cookbooks``` and run ```./bootstrap``` as root, this will git clone all needed dependencies. When done, run ```chef-solo -j node.json``` to let Chef do it's work.
+Clone this repo in ```/root/chef/cookbooks```, modify ```attributes/default.rb.example``` and run ```./bootstrap``` as root, this will git clone all needed dependencies. When done, run ```chef-solo -j node.json``` to let Chef do it's work.
 
 
 
