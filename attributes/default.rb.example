@@ -1,0 +1,9 @@
+node.override['libcec']['force_recompile'] = false
+node.override['xbmc']['force_recompile'] = false
+node.override['xbmc']['default_configure_flags'] = [
+   "--enable-vaapi",
+   "--enable-libcec=yes",
+   "--enable-avahi",
+   "--enable-airplay",
+   "--enable-airtunes",
+]

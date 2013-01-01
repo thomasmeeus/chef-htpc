@@ -15,6 +15,18 @@ else
   git clone git://github.com/opscode-cookbooks/git.git
 fi
 
+if [[ -d nginx ]]; then
+  cd nginx && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/nginx.git
+fi
+
+if [[ -d ohai ]]; then
+  cd ohai && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/ohai.git
+fi
+
 if [[ -d libcec ]]; then
   cd libcec && git pull && cd ..
 else
@@ -25,4 +37,10 @@ if [[ -d xbmc ]]; then
   cd xbmc && git pull && cd ..
 else
   git clone git://github.com/thomasmeeus/xbmc.git
+fi
+
+if [[ -d sabnzbd ]]; then
+  cd sabnzbd && git pull && cd ..
+else
+  git clone git://github.com/thomasmeeus/sabnzbd.git
 fi
