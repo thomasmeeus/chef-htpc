@@ -44,3 +44,15 @@ if [[ -d sabnzbd ]]; then
 else
   git clone git://github.com/thomasmeeus/sabnzbd.git
 fi
+
+if [[ -d couchpotato ]]; then
+  cd couchpotato && git pull && cd ..
+else
+  git clone git://github.com/thomasmeeus/couchpotato.git
+fi
+
+if [[ -d sickbeard ]]; then
+  cd sickbeard && git pull && cd ..
+else
+  git clone git://github.com/thomasmeeus/sickbeard.git
+fi

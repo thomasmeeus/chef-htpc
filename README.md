@@ -8,7 +8,9 @@ What does it do?
 
 * Install LibCEC
 * Install XBMC
-* Install  and configure Sabnzbd
+* Install and configure Sabnzbd
+* Install and configure Couchpotato
+* Install and configure Sickbeard
 * Install and configure Nginx to reverse proxy
 
 How To
@@ -29,7 +31,7 @@ Install Chef-solo on Ubuntu 12.10 Minimal
 Configure Chef-Solo
 -------------------
 
-Edit /etc/chef/solo.rb like this:
+* Edit /etc/chef/solo.rb like this:
 
     file_cache_path "/tmp/chef"
     cookbook_path "/root/chef/cookbooks"
@@ -37,16 +39,23 @@ Edit /etc/chef/solo.rb like this:
     role_path nil
     log_level :info
 
-Edit ```/root/chef/node.json``` like this:
+* Edit ```/root/chef/node.json``` like this:
 
     {
         "run_list": [ "recipe[htpc::default]" ]
     }
 
+* Clone this repo in ```/root/chef/cookbooks```
+
+Personal settings
+--------------
+
+Edit ```attributes/default.rb.example``` with your personal settings, check the used cookbooks for all available attributes since I don't use them all. Save the file as ```default.rb```.
+
 Bootstrap
 ---------
 
-Clone this repo in ```/root/chef/cookbooks```, modify ```attributes/default.rb.example``` and run ```./bootstrap``` as root, this will git clone all needed dependencies. When done, run ```chef-solo -j node.json``` to let Chef do it's work.
+Run ```./bootstrap``` as root, this will git clone all needed dependencies. When done, run ```chef-solo -j node.json``` to let Chef do it's work.
 
 
 

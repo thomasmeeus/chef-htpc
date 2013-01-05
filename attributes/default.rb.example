@@ -7,3 +7,100 @@ node.override['xbmc']['default_configure_flags'] = [
    "--enable-airplay",
    "--enable-airtunes",
 ]
+
+node.override['sabnzbd']['servers'] = [
+        {
+            "name" => "',
+            "username" => "",
+            "timeout" => "120",
+            "enable" => "1",
+            "fillserver" => "0",
+            "connections" => "10",
+            "ssl" => "1",
+            "host" => "",
+            "password" => "",
+            "optional" => "0",
+            "port" => "443",
+            "retention" => "9000",
+        },
+        {
+            "name" => "",
+            "username" => "",
+            "enable" => "1",
+            "fillserver" => "1",
+            "connections" => "1",
+            "ssl" => "1",
+            "host" => "",
+            "timeout" => "120",
+            "password" => "",
+            "optional" => "0",
+            "port" => "443",
+            "retention" => "6000",
+        }
+    ]
+node.override['sabnzbd']['categories'] = [
+                                              {   "name" => "*",
+                                                  "priority" => "0",
+                                                  "pp" => "3",
+                                                  "script" => "None",
+                                                  "newsbin" => "",
+                                                   "dir" => ""
+                                               },
+                                              {   "name" => "music",
+                                                  "priority" => "-100",
+                                                  "pp" => "3",
+                                                  "script" => "Default",
+                                                  "newsbin" => "",
+                                                   "dir" => "Downloads/complete/music"
+                                               },
+                                              {   "name" => "tv-shows",
+                                                  "priority" => "-100",
+                                                  "pp" => "3",
+                                                  "script" => "Default",
+                                                  "newsbin" => "",
+                                                   "dir" => "Downloads/complete/tv-shows"
+                                               },
+                                              {   "name" => "movies",
+                                                  "priority" => "-100",
+                                                  "pp" => "3",
+                                                  "script" => "Default",
+                                                  "newsbin" => "",
+                                                   "dir" => "Downloads/complete/movies"
+                                               }
+                                      ]
+node.override['sabnzbd']['enable_tv_sorting'] = "1"
+node.override['sabnzbd']['tv_categories'] = "tv-shows,"
+node.override['sabnzbd']['tv_sort_string'] = "%sN/Season %0s/%fn"
+node.override['sabnzbd']['enable_movie_sorting'] = "1"
+node.override['sabnzbd']['movie_categories'] = "movies,"
+node.override['sabnzbd']['movie_sort_string'] = "%fn"
+node.override['sabnzbd']['ignore_samples'] = "1"
+node.override['sabnzbd']['cleanup_list'] = ".nfo, .sfv, .srr, .nzb"
+node.override['sabnzbd']['pre_check'] = "1"
+node.override['sabnzbd']['quota_day']  = "12"
+node.override['sabnzbd']['quota_size']  = "30G"
+node.override['sabnzbd']['quota_resume'] = "1"
+node.override['sabnzbd']['api_key'] = "84e0a850e98d1b1409327c9ae34ea880"
+
+
+node.override['sickbeard']['data_dir']   = "/home/#{node['sickbeard']['user']}/.sickbeard"
+node.override['sickbeard']['nzb_method'] = "sabnzbd"
+node.override['sickbeard']['sab_apikey'] = node['sabnzbd']['api_key']
+node.override['sickbeard']['sab_category'] = "tv"
+node.override['sickbeard']['sab_host'] = "http://localhost:8080/"
+node.override['sickbeard']['provider_order'] = "provider_order = nzbs_r_us nzbs_org womble_s_index sick_beard_index tvtorrents ezrss btn"
+node.override['sickbeard']['newznab_data'] = "newznab_data = Sick Beard Index|http://lolo.sickbeard.com/||1!!!NZBs.org|http://beta.n zbs.org/||0"
+
+
+node.override['couchpotato']['data_dir']   = "/home/#{node['couchpotato']['user']}/.couchpotato"
+node.override["couchpotato"]["sabnzbd"]["category"] = "movies"
+node.override["couchpotato"]["sabnzbd"]["delete_failed"] = "True"
+node.override["couchpotato"]["sabnzbd"]["enabled"] ="1"
+node.override["couchpotato"]["sabnzbd"]["manual"] = "False"
+node.override["couchpotato"]["sabnzbd"]["host"] = "http://localhost:8080"
+node.override["couchpotato"]["sabnzbd"]["api_key"] = node['sabnzbd']['api_key']
+node.override["couchpotato"]["preferred_method"]  = "nzb"
+node.override["couchpotato"]["utorrent"]["enabled"] ="0"
+node.override["couchpotato"]["kickasstorrents"]["enabled"] ="False"
+node.override["couchpotato"]["publichd"]["enabled"] ="False"
+node.override["couchpotato"]["thepiratebay"]["enabled"] ="False"

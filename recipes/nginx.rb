@@ -4,6 +4,7 @@ template "/etc/nginx/sites-available/couchpotato" do
    source "nginx-couchpotato.erb"
    owner "root"
    mode "0644"
+   notifies :restart, 'service[nginx]'
 end
 
 execute "enable couchpotato" do
@@ -15,6 +16,7 @@ template "/etc/nginx/sites-available/headphones" do
    source "nginx-headphones.erb"
    owner "root"
    mode "0644"
+   notifies :restart, 'service[nginx]'
 end
 
 execute "enable headphones" do
@@ -26,6 +28,7 @@ template "/etc/nginx/sites-available/sabnzbd" do
    source "nginx-sabnzbd.erb"
    owner "root"
    mode "0644"
+   notifies :restart, 'service[nginx]'
 end
 
 execute "enable sabnzbd" do
@@ -37,6 +40,7 @@ template "/etc/nginx/sites-available/sickbeard" do
    source "nginx-sickbeard.erb"
    owner "root"
    mode "0644"
+   notifies :restart, 'service[nginx]'
 end
 
 execute "enable sickbeard" do
