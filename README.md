@@ -31,7 +31,7 @@ Install Chef-solo on Ubuntu 12.10 Minimal
 Configure Chef-Solo
 -------------------
 
-* Edit /etc/chef/solo.rb like this:
+Edit /etc/chef/solo.rb like this:
 
     file_cache_path "/tmp/chef"
     cookbook_path "/root/chef/cookbooks"
@@ -39,13 +39,13 @@ Configure Chef-Solo
     role_path nil
     log_level :info
 
-* Edit ```/root/chef/node.json``` like this:
+Edit ```/root/chef/node.json``` like this:
 
     {
         "run_list": [ "recipe[htpc::default]" ]
     }
 
-* Clone this repo in ```/root/chef/cookbooks```
+Clone this repo in ```/root/chef/cookbooks```
 
 Personal settings
 --------------
