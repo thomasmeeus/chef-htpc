@@ -23,6 +23,8 @@ include_recipe "htpc::nginx"
     acpi-support
     gconf2
     pm-utils
+    policykit-1
+    upower
 }.each do |pkg|
     package pkg do
         action :upgrade
