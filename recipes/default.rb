@@ -25,6 +25,7 @@ include_recipe "htpc::nginx"
     pm-utils
     policykit-1
     upower
+    laptop-mode-tools
 }.each do |pkg|
     package pkg do
         action :upgrade
