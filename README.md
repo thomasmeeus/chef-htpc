@@ -11,6 +11,7 @@ What does it do?
 * Install and configure Sabnzbd
 * Install and configure Couchpotato
 * Install and configure Sickbeard
+* Install and configure AutoSub
 * Install and configure Nginx to reverse proxy
 
 How To

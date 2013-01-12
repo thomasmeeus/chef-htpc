@@ -56,3 +56,9 @@ if [[ -d sickbeard ]]; then
 else
   git clone git://github.com/thomasmeeus/sickbeard.git
 fi
+
+if [[ -d autosub ]]; then
+  cd autosub && git pull && cd ..
+else
+  git clone git://github.com/thomasmeeus/autosub.git
+fi

@@ -47,3 +47,15 @@ execute "enable sickbeard" do
    command "nxensite sickbeard"
    creates "/etc/nginx/sites-enabled/sickbeard"
 end
+
+template "/etc/nginx/sites-available/autosub" do
+   source "nginx-autosub.erb"
+   owner "root"
+   mode "0644"
+   notifies :restart, 'service[autosub]'
+end
+
+execute "enable autosub" do
+   command "nxensite autosub"
+   creates "/etc/nginx/sites-enabled/autosub"
+end
