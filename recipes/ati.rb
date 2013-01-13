@@ -25,7 +25,7 @@ bash "install_ati_driver" do
   EOH
    not_if do
             ::File.exists?("/usr/bin/aticonfig") &&
-            node['ati']['force_download'] == false
+            node['htpc']['force_download_ati_driver'] == false
     end
 end
 
