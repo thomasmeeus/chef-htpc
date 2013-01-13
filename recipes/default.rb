@@ -1,4 +1,6 @@
 include_recipe "htpc::extras"
+include_recipe "htpc::ati"
+include_recipe "htpc::storage"
 include_recipe "libcec::default"
 include_recipe "xbmc::default"
 include_recipe "sabnzbd::default"
