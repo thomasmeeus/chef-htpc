@@ -33,6 +33,12 @@ else
   git clone git://github.com/opscode-cookbooks/openssh.git
 fi
 
+if [[ -d user ]]; then
+  cd user && git pull && cd ..
+else
+  git clone git://github.com/fnichol/chef-user.git user
+fi
+
 if [[ -d libcec ]]; then
   cd libcec && git pull && cd ..
 else

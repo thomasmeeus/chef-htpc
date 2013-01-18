@@ -46,6 +46,15 @@ Edit ```/root/chef/node.json``` like this:
         "run_list": [ "recipe[htpc::default]" ]
     }
 
+Edit ```/root/chef/data_bags/users/user.json ``` like this:
+
+    {
+     "id"        : "user",
+     "comment"   : "Username 1",
+     "home"      : "/home/user",
+     "ssh_keys"  : ["ssh-rsa AAA... A"]
+    }
+
 Clone this repo in ```/root/chef/cookbooks```
 
 Personal settings
