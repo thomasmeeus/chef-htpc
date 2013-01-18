@@ -27,6 +27,12 @@ else
   git clone git://github.com/opscode-cookbooks/ohai.git
 fi
 
+if [[ -d openssh ]]; then
+  cd openssh && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/openssh.git
+fi
+
 if [[ -d libcec ]]; then
   cd libcec && git pull && cd ..
 else
