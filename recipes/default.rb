@@ -1,3 +1,4 @@
+include_recipe "openssh::default"
 include_recipe "htpc::extras"
 include_recipe "htpc::ati"
 include_recipe "htpc::storage"
