@@ -45,6 +45,12 @@ else
   git clone git://github.com/opscode-cookbooks/build-essential.git
 fi
 
+if [[ -d mysql ]]; then
+  cd mysql && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/mysql.git
+fi
+
 if [[ -d user ]]; then
   cd user && git pull && cd ..
 else
