@@ -10,7 +10,7 @@ What does it do?
 * Install AMD Catalyst drivers
 * Finetune system settings
 * Install LibCEC
-* Install and configure XBMC
+* Install and configure XBMC with shared MySQL-library
 * Install and configure Sabnzbd
 * Install and configure Couchpotato
 * Install and configure Sickbeard

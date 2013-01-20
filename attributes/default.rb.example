@@ -12,6 +12,13 @@ node.override['xbmc']['default_configure_flags'] = [
    "--enable-airplay",
    "--enable-airtunes",
 ]
+default['xbmc']['usemysql'] = false
+default['mysql']['bind_address'] = "127.0.0.1"
+default['mysql']['server_debian_password'] = "mystrongmysqlrootpassword"
+default['mysql']['server_root_password']   = "mystrongmysqlrootpassword"
+default['mysql']['server_repl_password']   = "mystrongmysqlrootpassword"
+default['xbmc']['mysql']['username'] = "xbmc"
+default['xbmc']['mysql']['password'] = "mystrongxbmcrootpassword"
 
 node.override['sabnzbd']['servers'] = [
         {
