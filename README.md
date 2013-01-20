@@ -6,8 +6,11 @@ Installs and configures my perfect HTPC on Ubuntu 12.10 minimal
 What does it do?
 ================
 
+* Configure useraccounts & sudo
+* Install AMD Catalyst drivers
+* Finetune system settings
 * Install LibCEC
-* Install XBMC
+* Install and configure XBMC
 * Install and configure Sabnzbd
 * Install and configure Couchpotato
 * Install and configure Sickbeard

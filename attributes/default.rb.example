@@ -1,5 +1,8 @@
 default['users'] = ['user']
 
+node.override['authorization']['sudo']['users'] = "user"
+node.override['authorization']['sudo']['passwordless'] = "true"
+
 node.override['libcec']['force_recompile'] = false
 node.override['xbmc']['force_recompile'] = false
 node.override['xbmc']['default_configure_flags'] = [
