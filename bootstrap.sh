@@ -51,6 +51,12 @@ else
   git clone git://github.com/opscode-cookbooks/mysql.git
 fi
 
+if [[ -d openssl ]]; then
+  cd openssl && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/openssl.git
+fi
+
 if [[ -d user ]]; then
   cd user && git pull && cd ..
 else
