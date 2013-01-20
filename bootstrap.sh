@@ -39,6 +39,12 @@ else
   git clone git://github.com/opscode-cookbooks/openssh.git
 fi
 
+if [[ -d build-essential ]]; then
+  cd build-essential && git pull && cd ..
+else
+  git clone git://github.com/opscode-cookbooks/build-essential.git
+fi
+
 if [[ -d user ]]; then
   cd user && git pull && cd ..
 else
